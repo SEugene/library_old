@@ -3,7 +3,7 @@ from uuid import uuid4
 
 
 class Author(models.Model):
-   uuid = models.UUIDField(primary_key=True, default=uuid4())
+   uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
    first_name = models.CharField(max_length=64)
    last_name = models.CharField(max_length=64)
    birthday_year = models.PositiveIntegerField()
